@@ -1,9 +1,13 @@
 # Netlify build configuration for the Advanced Derma Next.js 14 (App Router) site.
-# The official Next.js runtime plugin handles the publish directory and serving,
-# so do NOT set a custom "Publish directory" in the Netlify UI — leave it default.
+# The official Next.js runtime plugin serves the app from the `.next` output.
+#
+# `publish = ".next"` is set explicitly here so this file (config) overrides any
+# "Publish directory" set in the Netlify UI. The plugin errors if the publish
+# directory equals the repo base directory — which is what the UI value caused.
 
 [build]
   command = "next build"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
