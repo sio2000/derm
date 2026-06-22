@@ -1,0 +1,12 @@
+# Netlify build configuration for the Advanced Derma Next.js 14 (App Router) site.
+# The official Next.js runtime plugin handles the publish directory and serving,
+# so do NOT set a custom "Publish directory" in the Netlify UI — leave it default.
+
+[build]
+  command = "next build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
