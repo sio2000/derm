@@ -1,0 +1,542 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'HarmoniaSans';
+  src: url('/fonts/HarmoniaSansW1G-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HarmoniaSans';
+  src: url('/fonts/HarmoniaSansW1G-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HarmoniaSans';
+  src: url('/fonts/HarmoniaSansW1G-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HarmoniaSansQuote';
+  src: url('/fonts/HarmoniaSansW1G-LightItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+:root {
+  /* ── Advanced Derma — Gold design tokens ─────────────────────────── */
+  --gold-bright: rgb(232, 213, 154);   /* #E8D59A — Bright Gold */
+  --gold: rgb(203, 179, 121);          /* #CBB379 — Classic Gold */
+  --gold-deep: rgb(147, 123, 76);      /* #937B4C — Deep Gold / Bronze */
+  --bronze-ink: rgb(110, 90, 51);      /* deep bronze — primary text/brand */
+  --champagne: rgb(244, 238, 224);     /* soft champagne — surfaces */
+
+  /* ── Semantic aliases (kept for backwards compatibility) ─────────── */
+  --primary: var(--bronze-ink);
+  --primary-light: var(--champagne);
+  --secondary: var(--gold);
+  --secondary-dark: var(--gold-deep);
+  --accent: rgb(248, 244, 235);
+  --surface: rgb(255, 255, 255);
+  --on-primary: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Global background — white across the entire site */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'HarmoniaSans', sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+
+html {
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'HarmoniaSans', sans-serif;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--secondary);
+  color: #000;
+  font-family: 'HarmoniaSans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(147, 123, 76);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--primary);
+  font-family: 'HarmoniaSans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.section-bg {
+  background-image: url('/images/section-bg.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.text-primary-color {
+  color: var(--primary);
+}
+
+@keyframes adLightboxIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Intro loading screen ───────────────────────────────────────── */
+.ad-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--champagne) 100%);
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.ad-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ad-loader-logo {
+  width: 120px;
+  height: auto;
+  animation: adLoaderPulse 2.2s ease-in-out infinite;
+}
+
+.ad-loader-text {
+  max-width: min(840px, 86vw);
+  font-family: 'HarmoniaSans', sans-serif;
+  font-size: clamp(0.72rem, 1.3vw, 0.95rem);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2.1;
+  color: var(--bronze-ink);
+}
+
+.ad-loader-text strong {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.44em;
+  color: var(--gold-deep);
+}
+
+.ad-loader-bar {
+  width: min(360px, 70vw);
+  height: 2px;
+  background: rgba(147, 123, 76, 0.2);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.ad-loader-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright));
+  transition: width 0.3s ease;
+}
+
+@keyframes adLoaderPulse {
+  0%, 100% { opacity: 0.7; transform: scale(0.99); }
+  50% { opacity: 1; transform: scale(1.01); }
+}
+
+/* About-us intro: stack image under text on small screens */
+@media (max-width: 768px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Exosomes section: stack video above copy on small screens */
+@media (max-width: 900px) {
+  .exo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+}
+
+/* ── Treatment list cards (vertical, reference style) ───────────── */
+.tl-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tl-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 24px;
+  border: 1px solid rgba(203, 179, 121, 0.55);
+  border-radius: 18px;
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 1px 6px rgba(110, 90, 51, 0.06);
+  transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.tl-card:hover {
+  background: var(--bronze-ink);
+  border-color: var(--bronze-ink);
+  box-shadow: 0 10px 26px rgba(110, 90, 51, 0.24);
+  transform: translateY(-2px);
+}
+
+.tl-thumb {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgb(244, 238, 224);
+}
+
+.tl-name {
+  font-family: 'HarmoniaSans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bronze-ink);
+  transition: color 0.22s ease;
+  line-height: 1.3;
+}
+
+.tl-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--gold-deep);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.22s ease, transform 0.22s ease, color 0.22s ease;
+}
+
+.tl-card:hover .tl-name { color: #fff; }
+.tl-card:hover .tl-arrow { opacity: 1; transform: translateX(0); color: rgb(232, 213, 154); }
+
+@media (max-width: 520px) {
+  .tl-thumb { width: 60px; height: 60px; }
+  .tl-name { font-size: 16px; }
+  .tl-card { padding: 12px 16px; gap: 14px; }
+}
+
+/* ── Rotating treatments marquee (under hero) ───────────────────── */
+.ad-marquee-strip {
+  background: var(--bronze-ink);
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ad-marquee-track {
+  display: inline-flex;
+  gap: 64px;
+  animation: adMarqueeScroll 26s linear infinite;
+  will-change: transform;
+}
+
+.ad-marquee-strip:hover .ad-marquee-track {
+  animation-play-state: paused;
+}
+
+.ad-marquee-group {
+  display: inline-flex;
+  gap: 64px;
+  align-items: center;
+}
+
+.ad-marquee-item {
+  font-family: 'HarmoniaSans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: linear-gradient(100deg, #ecd9a0 0%, #f7e9b5 35%, #ffd970 55%, #f7e9b5 80%, #ecd9a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: opacity 0.2s ease;
+}
+
+.ad-marquee-item:hover {
+  opacity: 0.7;
+}
+
+.ad-marquee-dot {
+  color: var(--gold);
+  opacity: 0.85;
+}
+
+@keyframes adMarqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ad-marquee-track { animation: none; }
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ================================================================== */
+/*  RESPONSIVE — mobile & tablet only.                                 */
+/*  Desktop (>= 961px) is intentionally untouched: every rule below    */
+/*  lives inside a max-width media query, and the hamburger / mobile   */
+/*  panel base styles target brand-new elements that render nothing    */
+/*  on desktop. The approved desktop layout stays pixel-identical.     */
+/* ================================================================== */
+
+/* ── Mobile navigation primitives (inert on desktop) ─────────────── */
+.ad-burger {
+  display: none; /* hidden on desktop; shown via media query below */
+  margin-left: auto;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(110, 90, 51, 0.25);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.ad-burger-box {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 16px;
+}
+.ad-burger-box > span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: rgb(110, 90, 51);
+  transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+}
+.ad-burger-box > span:nth-child(1) { top: 0; }
+.ad-burger-box > span:nth-child(2) { top: 7px; }
+.ad-burger-box > span:nth-child(3) { top: 14px; }
+.ad-burger-box[data-open="true"] > span:nth-child(1) { top: 7px; transform: rotate(45deg); }
+.ad-burger-box[data-open="true"] > span:nth-child(2) { opacity: 0; }
+.ad-burger-box[data-open="true"] > span:nth-child(3) { top: 7px; transform: rotate(-45deg); }
+
+.ad-mobile-panel {
+  display: none; /* shown only when open AND under the breakpoint */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: 2px;
+  background: #fff;
+  padding: 10px 16px 18px;
+  border-top: 1px solid rgba(110, 90, 51, 0.12);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+  max-height: calc(100vh - 135px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.ad-mobile-link {
+  font-family: 'HarmoniaSans', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(110, 90, 51);
+  padding: 13px 8px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(110, 90, 51, 0.08);
+}
+.ad-mobile-cta {
+  font-family: 'HarmoniaSans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 6px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ad-mobile-cta--solid { background: rgb(203, 179, 121); color: #000; margin-top: 12px; }
+.ad-mobile-cta--outline { border: 1px solid rgb(110, 90, 51); color: rgb(110, 90, 51); margin-top: 8px; }
+
+/* ── Tablet & below (<= 960px): stack two-column layouts, hamburger ─ */
+@media (max-width: 960px) {
+  /* Navbar: swap desktop links/CTAs for the hamburger + dropdown panel */
+  .ad-nav { display: none !important; }
+  .ad-actions { display: none !important; }
+  .ad-burger { display: inline-flex !important; }
+  .ad-mobile-panel.is-open { display: flex !important; }
+
+  /* Hero: stack (headline first), fluid image, smaller title */
+  .ad-hero { height: auto !important; overflow: visible !important; }
+  .ad-hero-inner {
+    flex-direction: column-reverse !important;
+    height: auto !important;
+    padding: 28px 24px !important;
+    gap: 24px !important;
+  }
+  .ad-hero-imgwrap { width: 100% !important; height: auto !important; max-width: 440px; }
+  .ad-hero-img { width: 100% !important; height: auto !important; }
+  .ad-hero-text { width: 100% !important; }
+  .ad-hero-title { font-size: 34px !important; }
+
+  /* Feature trust-bar: stack vertically, drop dividers */
+  .ad-featbar { height: auto !important; padding: 22px 16px !important; }
+  .ad-featbar-inner { flex-direction: column !important; gap: 16px !important; }
+  .ad-featbar-item { padding: 0 !important; border-right: none !important; }
+
+  /* ServiceSection: stack image over copy */
+  .ad-svc { min-height: 0 !important; }
+  .ad-svc-inner { flex-direction: column !important; min-height: 0 !important; }
+  .ad-svc-imgcol { flex: none !important; width: 100% !important; padding: 24px 24px 0 !important; }
+  .ad-svc-img { width: 100% !important; height: auto !important; }
+  .ad-svc-textcol { flex: none !important; width: 100% !important; padding: 24px !important; }
+  .ad-svc-title { font-size: 30px !important; }
+
+  /* Popular treatments: 3 → 2 columns */
+  .ad-pop { min-height: 0 !important; }
+  .ad-pop-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Doctor bio: stack portrait over text, single-column credentials */
+  .ad-whyus-inner { flex-direction: column !important; gap: 32px !important; align-items: flex-start !important; }
+  .ad-whyus-imgcol { flex: none !important; width: 100% !important; max-width: 380px; }
+  .ad-whyus-img { width: 100% !important; height: auto !important; }
+  .ad-whyus-creds { grid-template-columns: 1fr !important; }
+
+  /* Footer: 4 → 2 columns */
+  .ad-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+
+  /* Booking form + clinic detail: stack to one column */
+  .ad-booking-grid { grid-template-columns: 1fr !important; }
+  .ad-booking-locs { grid-template-columns: 1fr !important; }
+  .ad-clinic-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Skin-cancer awareness band (NewsSection): on tablet/phone the copy sits
+      on top of the photo background and becomes unreadable. Wrap it in a
+      readable frosted card over the image. Desktop (> 900px) is untouched. ── */
+@media (max-width: 900px) {
+  .ad-news { padding: 40px 28px !important; background-position: center !important; }
+  .ad-news-copy {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    padding: 24px 22px;
+    box-shadow: 0 6px 20px rgba(110, 90, 51, 0.16);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+}
+
+/* ── Phones (<= 600px): tighten typography & padding, single columns ─ */
+@media (max-width: 600px) {
+  .ad-hero-title { font-size: 30px !important; }
+  .ad-svc-title { font-size: 27px !important; }
+
+  .ad-pop-grid { grid-template-columns: 1fr !important; }
+  .ad-pop-title { font-size: 30px !important; }
+
+  .ad-news { padding: 26px 16px !important; }
+  .ad-news-title { font-size: 25px !important; }
+
+  .ad-myths { padding: 40px 22px !important; }
+  .ad-myths-title { font-size: 26px !important; }
+
+  .ad-whyus-title { font-size: 28px !important; }
+
+  .ad-footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+
+  .ad-booking-names { grid-template-columns: 1fr !important; }
+  .ad-booking-form { padding: 26px 20px !important; }
+
+  /* Auto-fit/auto-fill card grids whose min track (300–320px) is wider than a
+     narrow phone — collapse to a single column so nothing is clipped at 320px.
+     (Desktop keeps the inline minmax, untouched.) */
+  .ad-rgrid { grid-template-columns: 1fr !important; }
+
+  /* Doctor-bio stats: allow the figures to wrap instead of forcing the column
+     wider than the viewport on the narrowest screens. */
+  .ad-whyus-stats { flex-wrap: wrap !important; gap: 20px 32px !important; }
+}
