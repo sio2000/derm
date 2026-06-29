@@ -322,7 +322,7 @@ export const prosopoTreatments: Treatment[] = [
         ],
         media: [
           { type: 'image', src: '/images/peeling-1.jpg', alt: 'Χημικό Peeling — Advanced Derma' },
-          { type: 'video', src: '/videos/peeling.mp4', poster: '/images/peeling-video-poster.jpg', alt: 'Χημικό Peeling — βίντεο' },
+          { type: 'video', src: '/videos/peeling2.mp4', poster: '/images/peeling-video-poster.jpg', alt: 'Χημικό Peeling — βίντεο' },
         ],
       },
       {
