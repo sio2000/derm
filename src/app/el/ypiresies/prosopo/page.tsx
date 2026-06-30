@@ -20,7 +20,7 @@ export default function ProsopoPage() {
           position: 'relative',
           width: '100%',
           height: '420px',
-          backgroundColor: 'rgb(110, 90, 51)',
+          backgroundColor: 'rgb(244, 238, 224)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -29,13 +29,25 @@ export default function ProsopoPage() {
         }}
       >
         <Image
-          src="/images/face-treatments.png"
+          src="/images/prosopofotinieikona.png"
           alt="Θεραπείες Προσώπου"
           fill
-          style={{ objectFit: 'cover', opacity: 0.35 }}
+          sizes="100vw"
+          style={{ objectFit: 'contain', objectPosition: 'center' }}
           priority
         />
-        <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '0 24px' }}>
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            textAlign: 'center',
+            padding: '32px 40px',
+            margin: '0 24px',
+            borderRadius: '12px',
+            backgroundColor: 'rgba(110, 90, 51,0.55)',
+            backdropFilter: 'blur(2px)',
+          }}
+        >
           <h1
             style={{
               fontFamily: 'HarmoniaSans, sans-serif',
@@ -51,7 +63,7 @@ export default function ProsopoPage() {
             style={{
               fontFamily: 'HarmoniaSans, sans-serif',
               fontSize: '16px',
-              color: 'rgba(255,255,255,0.9)',
+              color: 'rgba(255,255,255,0.95)',
               maxWidth: '600px',
               margin: '0 auto',
               lineHeight: 1.6,

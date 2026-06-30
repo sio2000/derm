@@ -8,7 +8,7 @@ const ITEMS = [
   'Υαλουρονικό Οξύ',
   'Skin Boosters',
   'Πολυνουκλεοτίδια',
-  'Fractional Laser CO₂',
+  'Fractional Laser',
   'Χημικό Peeling',
   'Μεσοθεραπεία',
   'Laser Αποτρίχωση',

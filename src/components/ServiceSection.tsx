@@ -1,11 +1,12 @@
 'use client';
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface ServiceSectionProps {
   title: string;
   subtitle?: string;
-  description: string;
+  description: ReactNode;
   imageSrc: string;
   imageAlt: string;
   buttonText: string;

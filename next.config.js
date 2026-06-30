@@ -16,6 +16,16 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/el/ypiresies/prosopo/fractional-laser-co2',
+        destination: '/el/ypiresies/prosopo/fractional-laser',
+        permanent: true,
+      },
+      {
+        source: '/el/ypiresies/prosopo/fractional-laser-co2/',
+        destination: '/el/ypiresies/prosopo/fractional-laser/',
+        permanent: true,
+      },
     ];
   },
 };

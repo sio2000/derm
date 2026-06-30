@@ -2,27 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Only a Regular weight file exists for HarmoniaSans. We declare it ONLY for
+   weight 400 so the browser synthesizes (faux) bold for 600/700 / <strong>,
+   instead of mapping 700 to the Regular file (which made "bold" look normal). */
 @font-face {
   font-family: 'HarmoniaSans';
   src: url('/fonts/HarmoniaSansW1G-Regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HarmoniaSans';
-  src: url('/fonts/HarmoniaSansW1G-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HarmoniaSans';
-  src: url('/fonts/HarmoniaSansW1G-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 700;
   font-display: swap;
 }
 
@@ -79,6 +66,23 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'HarmoniaSans', sans-serif;
+}
+
+/* HarmoniaSans ships ONLY a Regular weight file, so neither a real nor a
+   browser-synthesized bold is available for it. Simulate bold for emphasised
+   text (<strong>/<b>) with a thin text-stroke so the highlighted words in the
+   homepage copy actually look bold. */
+strong, b {
+  font-weight: 700;
+  -webkit-text-stroke: 0.6px currentColor;
+  text-stroke: 0.6px currentColor;
+}
+
+/* Emphasised words in the homepage service blocks use the brand bronze colour
+   (matching the cancer-awareness copy) instead of the grey body colour, so the
+   bold highlights are on-brand rather than plain black. */
+.ad-svc-textcol strong {
+  color: rgb(110, 90, 51);
 }
 
 .btn-primary {
@@ -476,6 +480,11 @@ h1, h2, h3, h4, h5, h6 {
   .ad-svc-textcol { flex: none !important; width: 100% !important; padding: 24px !important; }
   .ad-svc-title { font-size: 30px !important; }
 
+  /* Treatment hero: stack bright image over copy */
+  .ad-thero-inner { flex-direction: column !important; padding: 32px 24px !important; gap: 28px !important; min-height: 0 !important; }
+  .ad-thero-img { flex: none !important; width: 100% !important; max-width: 100% !important; height: 280px !important; }
+  .ad-thero-text { width: 100% !important; }
+
   /* Popular treatments: 3 → 2 columns */
   .ad-pop { min-height: 0 !important; }
   .ad-pop-grid { grid-template-columns: repeat(2, 1fr) !important; }
@@ -516,7 +525,6 @@ h1, h2, h3, h4, h5, h6 {
   .ad-svc-title { font-size: 27px !important; }
 
   .ad-pop-grid { grid-template-columns: 1fr !important; }
-  .ad-pop-title { font-size: 30px !important; }
 
   .ad-news { padding: 26px 16px !important; }
   .ad-news-title { font-size: 25px !important; }

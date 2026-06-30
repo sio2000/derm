@@ -24,49 +24,107 @@ export default function SomaTreatmentPage({ params }: { params: { slug: string }
   const treatment = somaTreatments.find((t) => t.slug === params.slug);
   if (!treatment) notFound();
 
+  // One image goes in the hero; every other image/video is collected and shown
+  // at the bottom of the page (after the text, before the CTA).
+  const galleryMedia = [
+    ...(treatment.sections?.flatMap((s) => s.media ?? []) ?? []),
+    ...(treatment.media ?? []),
+  ];
+
   return (
     <>
       <Navbar />
 
-      {/* Hero */}
+      {/* Hero — bright treatment image at the start of the page */}
       <section
+        className="ad-thero"
         style={{
-          position: 'relative',
           width: '100%',
-          height: '480px',
-          backgroundColor: 'rgb(110, 90, 51)',
-          overflow: 'hidden',
+          backgroundColor: 'rgb(244, 238, 224)',
           marginTop: '135px',
-          display: 'flex',
-          alignItems: 'flex-end',
+          overflow: 'hidden',
         }}
       >
-        <Image
-          src={treatment.heroImage}
-          alt={treatment.name}
-          fill
-          style={{ objectFit: 'cover', opacity: 0.4 }}
-          priority
-        />
         <div
+          className="ad-thero-inner"
           style={{
-            position: 'relative',
-            zIndex: 1,
-            padding: '0 0 48px 64px',
-            maxWidth: '800px',
+            maxWidth: '1280px',
+            margin: '0 auto',
+            display: 'flex',
+            flexDirection: 'row-reverse',
+            alignItems: 'center',
+            gap: '48px',
+            padding: '56px 64px',
+            minHeight: '420px',
           }}
         >
-          <h1
+          <div
+            className="ad-thero-img"
             style={{
-              fontFamily: 'HarmoniaSans, sans-serif',
-              fontSize: 'clamp(28px, 4vw, 52px)',
-              fontWeight: 700,
-              color: '#fff',
-              lineHeight: 1.2,
+              flex: '0 0 46%',
+              maxWidth: '46%',
+              position: 'relative',
+              height: '380px',
+              borderRadius: '10px',
+              overflow: 'hidden',
+              boxShadow: '0 8px 28px rgba(110, 90, 51, 0.18)',
             }}
           >
-            {treatment.name}
-          </h1>
+            <Image
+              src={treatment.heroImage}
+              alt={treatment.name}
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              priority
+            />
+          </div>
+          <div className="ad-thero-text" style={{ flex: 1 }}>
+            <h1
+              style={{
+                fontFamily: 'HarmoniaSans, sans-serif',
+                fontSize: 'clamp(30px, 4vw, 48px)',
+                fontWeight: 700,
+                color: 'rgb(110, 90, 51)',
+                lineHeight: 1.15,
+                margin: 0,
+              }}
+            >
+              {treatment.name}
+            </h1>
+            <p
+              style={{
+                fontFamily: 'HarmoniaSans, sans-serif',
+                fontSize: '16px',
+                color: '#5a4a30',
+                lineHeight: 1.7,
+                margin: '20px 0 28px',
+                maxWidth: '520px',
+              }}
+            >
+              {treatment.description}
+            </p>
+            <Link
+              href="/el/booking-request/"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgb(203, 179, 121)',
+                color: '#000',
+                fontFamily: 'HarmoniaSans, sans-serif',
+                fontSize: '16px',
+                fontWeight: 500,
+                padding: '12px 24px',
+                borderRadius: '4px',
+                textDecoration: 'none',
+              }}
+            >
+              Κλείστε ραντεβού
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -123,32 +181,6 @@ export default function SomaTreatmentPage({ params }: { params: { slug: string }
 
       {/* Content */}
       <section style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 24px 80px' }}>
-        {treatment.tagline && (
-          <p
-            style={{
-              fontFamily: 'HarmoniaSans, sans-serif',
-              fontSize: '16px',
-              fontStyle: 'italic',
-              color: 'rgb(147, 123, 76)',
-              lineHeight: 1.5,
-              marginBottom: '24px',
-            }}
-          >
-            {treatment.tagline}
-          </p>
-        )}
-        <p
-          style={{
-            fontFamily: 'HarmoniaSans, sans-serif',
-            fontSize: '16px',
-            lineHeight: 1.8,
-            color: '#333',
-            marginBottom: '32px',
-          }}
-        >
-          {treatment.description}
-        </p>
-
         {treatment.bullets && treatment.bullets.length > 0 && (
           <ul
             style={{
@@ -210,11 +242,10 @@ export default function SomaTreatmentPage({ params }: { params: { slug: string }
                   {para}
                 </p>
               ))}
-              {sec.media && sec.media.length > 0 && <TreatmentMedia media={sec.media} />}
             </div>
           ))}
 
-        {treatment.media && <TreatmentMedia media={treatment.media} />}
+        {galleryMedia.length > 0 && <TreatmentMedia media={galleryMedia} />}
       </section>
 
       <TreatmentCTA />

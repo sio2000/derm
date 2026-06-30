@@ -64,12 +64,14 @@ export default function Footer() {
           <p
             style={{
               fontFamily: 'HarmoniaSans, sans-serif',
-              fontSize: '16px',
+              fontSize: '15px',
               color: 'rgba(110, 90, 51,0.85)',
-              lineHeight: 1.6,
+              lineHeight: 1.7,
+              letterSpacing: '0.1px',
               paddingLeft: '16px',
               marginBottom: '16px',
-              maxWidth: '200px',
+              maxWidth: '230px',
+              textAlign: 'left',
             }}
           >
             Δερματολογία &amp; Αισθητική Ιατρική υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου, σε Αθήνα και Πειραιά.
@@ -97,16 +99,37 @@ export default function Footer() {
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
               </svg>
             </Link>
+            <Link
+              href="https://www.tiktok.com/@advanced_derma"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok — Advanced Derma"
+              style={{
+                width: '36px',
+                height: '36px',
+                borderRadius: '50%',
+                backgroundColor: 'rgb(110, 90, 51)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#fff',
+                transition: 'opacity 0.2s',
+              }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                <path d="M16.5 3c.3 2.1 1.5 3.4 3.5 3.5v2.4c-1.2.1-2.4-.3-3.5-1v5.8c0 4.4-3.9 6.9-7.4 5.1-3-1.6-3.4-5.8-.7-7.9 1-.8 2.3-1.1 3.6-.9v2.6c-.4-.1-.9-.1-1.3 0-1.3.3-1.9 1.6-1.4 2.8.5 1.2 2 1.5 3 .7.5-.4.7-1 .7-1.7V3h2z"/>
+              </svg>
+            </Link>
           </div>
           {/* Instagram usernames (text links only) */}
-          <ul style={{ listStyle: 'none', padding: 0, margin: '16px 0 0', paddingLeft: '16px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+          <ul style={{ listStyle: 'none', padding: 0, margin: '18px 0 0', paddingLeft: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {instagramAccounts.map((acc) => (
-              <li key={acc.handle}>
+              <li key={acc.handle} style={{ lineHeight: 1.2 }}>
                 <a
                   href={acc.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: 'rgba(110, 90, 51,0.9)' }}
+                  style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '15px', fontWeight: 500, letterSpacing: '0.2px', color: 'rgba(110, 90, 51,0.9)' }}
                 >
                   {acc.handle}
                 </a>

@@ -342,10 +342,13 @@ export default function BookingRequestPage() {
                 Τηλέφωνο
               </h3>
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
-                Αθήνα: <a href="tel:+302103123456" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>+30 210 312 3456</a>
+                Αθήνα: <a href="tel:+306975105858" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>697 510 5858</a>
+              </p>
+              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
+                Πειραιάς: <a href="tel:+306936717377" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>693 671 7377</a>
               </p>
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333' }}>
-                Πειραιάς: <a href="tel:+302104987654" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>+30 210 498 7654</a>
+                Σταθερό: <a href="tel:+302168093444" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>216 809 3444</a>
               </p>
             </div>
 
@@ -390,8 +393,11 @@ export default function BookingRequestPage() {
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Instagram: <a href="https://www.instagram.com/chrysoula_zisimou/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@chrysoula_zisimou</a>
               </p>
-              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333' }}>
+              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Facebook: <a href="https://www.facebook.com/advancedermaa/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>Advanced Derma</a>
+              </p>
+              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333' }}>
+                TikTok: <a href="https://www.tiktok.com/@advanced_derma" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@advanced_derma</a>
               </p>
             </div>
 

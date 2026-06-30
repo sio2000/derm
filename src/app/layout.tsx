@@ -74,6 +74,7 @@ const jsonLd = {
     'https://www.instagram.com/advanced_laser_/',
     'https://www.instagram.com/advanced_peiraias/',
     'https://www.instagram.com/chrysoula_zisimou/',
+    'https://www.tiktok.com/@advanced_derma',
   ],
 };
 

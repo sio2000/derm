@@ -41,6 +41,7 @@ export default function NewsSection() {
               color: 'rgb(110, 90, 51)',
               marginBottom: '16px',
               lineHeight: 1.2,
+              WebkitTextStroke: '0.8px currentColor',
             }}
           >
             Μάιος: Μήνας Πρόληψης & Ενημέρωσης για τον Καρκίνο του Δέρματος
@@ -54,8 +55,8 @@ export default function NewsSection() {
               marginBottom: '28px',
             }}
           >
-            Ο καρκίνος του δέρματος είναι ο{' '}
-            <strong>συχνότερος τύπος καρκίνου</strong>, αλλά παραμένει σε μεγάλο βαθμό ιάσιμος όταν διαγνωστεί έγκαιρα!
+            <strong>Ο καρκίνος του δέρματος</strong> είναι ο συχνότερος τύπος καρκίνου, αλλά{' '}
+            <strong>παραμένει σε μεγάλο βαθμό ιάσιμος όταν διαγνωστεί έγκαιρα!</strong>
           </p>
           <Link
             href="/el/news/"

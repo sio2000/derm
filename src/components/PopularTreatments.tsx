@@ -4,12 +4,13 @@ import Link from 'next/link';
 import { prosopoTreatments, somaTreatments } from '@/data/treatments';
 
 const popularSlugs = [
-  'fractional-laser-co2',
+  'fractional-laser',
   'bacio',
   'polynucleotides',
   'botox',
-  'barbie-botox',
+  'hydrafacial',
   'aqualyx-michelangelo',
+  'apotrixosi-laser-alexandrite',
 ];
 
 const allTreatments = [...prosopoTreatments, ...somaTreatments];
@@ -44,7 +45,7 @@ export default function PopularTreatments() {
           className="ad-pop-title"
           style={{
             fontFamily: 'HarmoniaSans, sans-serif',
-            fontSize: '40px',
+            fontSize: 'clamp(22px, 4vw, 40px)',
             fontWeight: 700,
             color: 'rgb(110, 90, 51)',
             marginBottom: '48px',
