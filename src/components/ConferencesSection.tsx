@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const conferenceImages = [1, 2, 3, 4, 5, 6].map((n) => ({
+const conferenceImages = [2, 3, 4, 5, 6, 1].map((n) => ({
   src: `/images/conference-${n}.jpg`,
   alt: `Η Δρ. Χρυσούλα Ζήσιμου σε συνέδριο δερματολογίας — φωτογραφία ${n}`,
 }));

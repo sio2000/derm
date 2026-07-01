@@ -472,10 +472,10 @@ strong, b {
   .ad-featbar-inner { flex-direction: column !important; gap: 16px !important; }
   .ad-featbar-item { padding: 0 !important; border-right: none !important; }
 
-  /* ServiceSection: stack image over copy */
+  /* ServiceSection: stack copy over image (image goes BELOW its own text) */
   .ad-svc { min-height: 0 !important; }
-  .ad-svc-inner { flex-direction: column !important; min-height: 0 !important; }
-  .ad-svc-imgcol { flex: none !important; width: 100% !important; padding: 24px 24px 0 !important; }
+  .ad-svc-inner { flex-direction: column-reverse !important; min-height: 0 !important; }
+  .ad-svc-imgcol { flex: none !important; width: 100% !important; padding: 8px 24px 24px !important; }
   .ad-svc-img { width: 100% !important; height: auto !important; }
   .ad-svc-textcol { flex: none !important; width: 100% !important; padding: 24px !important; }
   .ad-svc-title { font-size: 30px !important; }

@@ -69,9 +69,13 @@ export default function Footer() {
               lineHeight: 1.7,
               letterSpacing: '0.1px',
               paddingLeft: '16px',
+              paddingRight: '16px',
               marginBottom: '16px',
-              maxWidth: '230px',
               textAlign: 'left',
+              hyphens: 'none',
+              WebkitHyphens: 'none',
+              overflowWrap: 'normal',
+              wordBreak: 'normal',
             }}
           >
             Δερματολογία &amp; Αισθητική Ιατρική υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου, σε Αθήνα και Πειραιά.
