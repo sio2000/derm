@@ -2765,8 +2765,8 @@ export const somaTreatments: Treatment[] = [
     tagline: 'Μη-χειρουργική αναδιαμόρφωση σιλουέτας με ενέσιμο υαλουρονικό οξύ.',
     description:
       'Το Hyacorp Body Contouring είναι μια μη-χειρουργική θεραπεία σώματος που σμιλεύει τη σιλουέτα, μειώνει την κυτταρίτιδα και το τοπικό λίπος, χαρίζοντας λεία και σφιχτή επιδερμίδα. Τα αποτελέσματα είναι άμεσα ορατά!',
-    heroImage: '/images/body-treatments.png',
-    thumb: '/images/body-treatments.png',
+    heroImage: '/images/hyacorp-body.png',
+    thumb: '/images/hyacorp-body.png',
     toc: [
       { label: 'Τι είναι', anchor: 'ti-einai' },
       { label: 'Σε ποιες περιοχές', anchor: 'perioxes' },
@@ -3140,8 +3140,8 @@ export const somaTreatments: Treatment[] = [
     tagline: 'Ενέσιμη θεραπεία που αντιμετωπίζει την κυτταρίτιδα στη βιοχημική της ρίζα.',
     description:
       'Το ALIDYA είναι μια αποτελεσματική ενέσιμη θεραπεία για την κυτταρίτιδα. Βελτιώνει την κυκλοφορία, μειώνει την όψη φλοιού πορτοκαλιού και χαρίζει πιο σφριγηλό δέρμα.',
-    heroImage: '/images/body-treatments.png',
-    thumb: '/images/body-treatments.png',
+    heroImage: '/images/alidya.png',
+    thumb: '/images/alidya.png',
     toc: [{ label: 'Τι είναι', anchor: 'ti-einai' }],
     sections: [
       {
@@ -3252,8 +3252,8 @@ export const somaTreatments: Treatment[] = [
     tagline: 'Βελτίωση της όψης των ραγάδων με fractional laser και εξατομικευμένα πρωτόκολλα.',
     description:
       'Θέλετε να αντιμετωπίσετε τις ραγάδες και να βελτιώσετε την όψη του δέρματος σας; Oι ραγάδες είναι ένα από τα πιο συχνά αισθητικά «παράπονα» στο δερματολογικό ιατρείο, και αφορούν την πλειονότητα των γυναικών αλλά και πολλούς άνδρες.',
-    heroImage: '/images/soma.png',
-    thumb: '/images/soma.png',
+    heroImage: '/images/ragades.png',
+    thumb: '/images/ragades.png',
     toc: [
       { label: 'Τι είναι', anchor: 'ti-einai' },
       { label: 'Που & Γιατί εμφανίζονται', anchor: 'perioxes' },
@@ -3706,7 +3706,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Ψηφιακή παρακολούθηση σπίλων ολόκληρου του σώματος για την πρόληψη του μελανώματος.',
     description:
       'Η χαρτογράφηση σπίλων με σύστημα FotoFinder είναι μια προηγμένη μέθοδος ψηφιακής δερματοσκόπησης που αποτυπώνει με ακρίβεια ολόκληρο το «τοπίο» του δέρματος. Με συνδυασμό φωτογράφισης ολόσωμης επιφάνειας (total body mapping) και δερματοσκοπικής μεγέθυνσης, καταγράφονται και αποθηκεύονται ψηφιακά οι σπίλοι, ώστε να παρακολουθούνται με ασφάλεια στον χρόνο.',
-    heroImage: img('chartografisi-spilon'),
+    heroImage: '/images/foto.png',
     sections: [
       {
         heading: 'Χαρτογράφηση Σπίλων με FotoFinder Bodystudio ATBM',
@@ -3729,7 +3729,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Ασφαλής αφαίρεση και έλεγχος υποτροπών.',
     description:
       'Οι μυρμηγκιές είναι μια ιογενής λοίμωξη του δέρματος, που προκαλεί ταχεία ανάπτυξη των κυττάρων στο εξωτερικό στρώμα. Οφείλονται στον ιό HPV, με πολλά διαφορετικά στελέχη να εμφανίζονται σε διαφορετικές περιοχές του σώματος.',
-    heroImage: img('myrmigkies'),
+    heroImage: '/images/mirmigkies.png',
     sections: [
       {
         heading: 'Τι είναι οι μυρμηγκιές',
@@ -3805,7 +3805,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Ολοκληρωμένη αντιμετώπιση της ακμής και των σημαδιών της.',
     description:
       'Η ακμή είναι μία από τις συχνότερες δερματικές παθήσεις, που επηρεάζει εφήβους και ενήλικες. Αντιμετωπίζεται ολοκληρωμένα με εξατομικευμένα πρωτόκολλα, ώστε να ελεγχθούν τόσο οι ενεργές βλάβες όσο και τα σημάδια που αφήνουν.',
-    heroImage: img('akmi'),
+    heroImage: '/images/akmi.png',
     sections: [
       {
         heading: 'Τι είναι η ακμή',
@@ -3960,8 +3960,8 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Παρακολούθηση και αξιολόγηση των σπίλων για την πρόληψη του μελανώματος.',
     description:
       'Οι σπίλοι (ελιές) είναι συνήθεις καλοήθεις σχηματισμοί, ωστόσο χρειάζονται τακτική παρακολούθηση. Η δερματοσκοπική αξιολόγηση επιτρέπει την έγκαιρη ανίχνευση ύποπτων αλλαγών και την πρόληψη του μελανώματος.',
-    heroImage: '/images/clinical-dermatology.png',
-    thumb: '/images/clinical-dermatology.png',
+    heroImage: '/images/spiloi.png',
+    thumb: '/images/spiloi.png',
     sections: [
       {
         heading: 'Τι είναι οι σπίλοι',
@@ -4038,6 +4038,7 @@ export const klinikiTreatments: Treatment[] = [
     description:
       'Τα σεξουαλικώς μεταδιδόμενα νοσήματα απαιτούν έγκαιρη διάγνωση, σωστή θεραπεία και υπεύθυνη ενημέρωση. Η αντιμετώπιση γίνεται με απόλυτη εχεμύθεια και σεβασμό στον ασθενή.',
     heroImage: img('smn'),
+    thumb: '/images/smn2.png',
     sections: [
       {
         heading: 'Τι είναι τα ΣΜΝ',
@@ -4204,7 +4205,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Έλεγχος του εκζέματος και της ξηρότητας του ατοπικού δέρματος.',
     description:
       'Η ατοπική δερματίτιδα είναι μια χρόνια φλεγμονώδης πάθηση που εκδηλώνεται με ξηρότητα, κνησμό και εκζεματικές βλάβες. Με σωστή θεραπεία και φροντίδα του δέρματος τα συμπτώματα ελέγχονται και βελτιώνεται η ποιότητα ζωής.',
-    heroImage: img('atopiki-dermatitida'),
+    heroImage: '/images/atopiki.png',
     sections: [
       {
         heading: 'Τι είναι η ατοπική δερματίτιδα',
@@ -4242,7 +4243,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Αντιμετώπιση της ερυθρότητας και της απολέπισης σε σμηγματογόνες περιοχές.',
     description:
       'Η σμηγματορροϊκή δερματίτιδα εκδηλώνεται με ερυθρότητα και λιπαρή απολέπιση, κυρίως στο τριχωτό της κεφαλής, στο πρόσωπο και στο στήθος. Είναι χρόνια πάθηση με εξάρσεις και υφέσεις, που ελέγχεται αποτελεσματικά.',
-    heroImage: img('smigmatorroiki-dermatitida'),
+    heroImage: '/images/smigma.png',
     sections: [
       {
         heading: 'Τι είναι η σμηγματορροϊκή δερματίτιδα',
@@ -4274,7 +4275,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Σύγχρονη αντιμετώπιση της ψωρίασης με εξατομικευμένα πρωτόκολλα.',
     description:
       'Η ψωρίαση είναι μια χρόνια αυτοάνοση πάθηση που εκδηλώνεται με ερυθηματώδεις, απολεπιστικές πλάκες. Με τα σύγχρονα θεραπευτικά μέσα επιτυγχάνεται σημαντικός έλεγχος των συμπτωμάτων και βελτίωση της ποιότητας ζωής.',
-    heroImage: img('psoriasi'),
+    heroImage: '/images/psoriasi.png',
     sections: [
       {
         heading: 'Τι είναι η ψωρίαση',
@@ -4312,7 +4313,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Διερεύνηση και αντιμετώπιση της οξείας και χρόνιας κνίδωσης.',
     description:
       'Η κνίδωση εκδηλώνεται με κνησμώδεις πομφούς και μπορεί να είναι οξεία ή χρόνια. Η διερεύνηση των αιτίων και η κατάλληλη αγωγή προσφέρουν ανακούφιση και έλεγχο των συμπτωμάτων.',
-    heroImage: img('knidosi'),
+    heroImage: '/images/knidosi.png',
     sections: [
       {
         heading: 'Τι είναι η κνίδωση',
@@ -4344,7 +4345,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Βελτίωση της εμφάνισης ουλών και χηλοειδών.',
     description:
       'Οι υπερτροφικές ουλές και τα χηλοειδή είναι αποτέλεσμα υπερβολικής επούλωσης. Με σύγχρονες θεραπείες βελτιώνεται σημαντικά η εμφάνιση, η υφή και τα συμπτώματά τους.',
-    heroImage: img('chiloeidi-oules'),
+    heroImage: '/images/xiloidi.png',
     sections: [
       {
         heading: 'Τι είναι τα χηλοειδή & οι ουλές',
@@ -4478,7 +4479,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Αφαίρεση των ξανθελασμάτων με αισθητικό αποτέλεσμα.',
     description:
       'Τα ξανθελάσματα είναι κιτρινωπές εναποθέσεις λιπιδίων, κυρίως γύρω από τα βλέφαρα. Αφαιρούνται αποτελεσματικά, με προσοχή στην ευαίσθητη περιοχή και στο αισθητικό αποτέλεσμα.',
-    heroImage: img('xanthelasmata'),
+    heroImage: '/images/xanthe.png',
     sections: [
       {
         heading: 'Τι είναι τα ξανθελάσματα',
@@ -4509,7 +4510,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Φροντίδα και επούλωση χρόνιων δερματικών ελκών.',
     description:
       'Τα δερματικά έλκη είναι χρόνιες, δύσκολα επουλούμενες πληγές, που συχνά σχετίζονται με φλεβική ή αρτηριακή ανεπάρκεια ή με σακχαρώδη διαβήτη. Η σωστή φροντίδα είναι καθοριστική για την επούλωση.',
-    heroImage: img('elki'),
+    heroImage: '/images/elki.png',
     sections: [
       {
         heading: 'Τι είναι τα δερματικά έλκη',
@@ -4573,7 +4574,7 @@ export const klinikiTreatments: Treatment[] = [
     tagline: 'Σύγχρονη αντιμετώπιση και επαναχρωματισμός στη λεύκη.',
     description:
       'Η λεύκη (vitiligo) είναι μια πάθηση που χαρακτηρίζεται από απώλεια του χρώματος του δέρματος σε καλά καθορισμένες περιοχές. Με τα σύγχρονα θεραπευτικά μέσα επιδιώκεται η σταθεροποίηση και ο επαναχρωματισμός.',
-    heroImage: img('lefki'),
+    heroImage: '/images/lefki.png',
     sections: [
       {
         heading: 'Τι είναι η λεύκη',

@@ -10,13 +10,14 @@ const clinicCards = [
     image: '/images/treatments-bg.webp',
     isCenter: true,
     title: 'Τα Ιατρεία μας',
-    text: 'Επισκεφθείτε το Advanced Derma σε Αθήνα (Ζωγράφου) και Πειραιά και επιλέξτε την τοποθεσία που σας εξυπηρετεί.',
+    text: 'Επισκεφθείτε το Advanced Derma στου Ζωγράφου (Αθήνα).',
     href: '/el/dermatologika-iatreia/',
   },
-  {
-    image: '/images/clinic-piraeus.jpg',
-    href: '/el/dermatologiko-iatreio/peiraias/',
-  },
+  // Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
+  // {
+  //   image: '/images/clinic-piraeus.jpg',
+  //   href: '/el/dermatologiko-iatreio/peiraias/',
+  // },
 ];
 
 export default function FindClinicSection() {

@@ -63,7 +63,9 @@ export default function ClinicsPage() {
             gap: '32px',
           }}
         >
-          {clinics.map((clinic) => (
+          {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί: το ιατρείο Πειραιά (slug 'peiraias')
+              φιλτράρεται μόνο από την προβολή. Τα δεδομένα παραμένουν στο data/treatments.ts. */}
+          {clinics.filter((clinic) => clinic.slug !== 'peiraias').map((clinic) => (
             <div
               key={clinic.slug}
               style={{ textDecoration: 'none', cursor: 'default' }}

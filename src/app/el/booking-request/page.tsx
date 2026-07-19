@@ -120,9 +120,11 @@ export default function BookingRequestPage() {
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Αθήνα: <a href="tel:+306975105858" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>697 510 5858</a>
               </p>
+              {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Πειραιάς: <a href="tel:+306936717377" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>693 671 7377</a>
               </p>
+              */}
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333' }}>
                 Σταθερό: <a href="tel:+302168093444" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>216 809 3444</a>
               </p>
@@ -163,9 +165,11 @@ export default function BookingRequestPage() {
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Instagram: <a href="https://www.instagram.com/advanced_laser_/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@advanced_laser_</a>
               </p>
+              {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Instagram: <a href="https://www.instagram.com/advanced_peiraias/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@advanced_peiraias</a>
               </p>
+              */}
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Instagram: <a href="https://www.instagram.com/chrysoula_zisimou/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@chrysoula_zisimou</a>
               </p>
@@ -217,7 +221,8 @@ export default function BookingRequestPage() {
           className="derma-booking-locs"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+            // Πρωτότυπο (μην διαγραφεί): gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
+            gridTemplateColumns: '1fr',
             gap: '24px',
           }}
         >
@@ -252,6 +257,7 @@ export default function BookingRequestPage() {
             />
           </div>
 
+          {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
           <div
             style={{
               backgroundColor: '#fff',
@@ -282,6 +288,7 @@ export default function BookingRequestPage() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+          */}
         </div>
       </section>
 

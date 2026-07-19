@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 const clinicLinks = [
   { label: 'Advanced Derma Αθήνα', href: '/el/dermatologiko-iatreio/athina/' },
-  { label: 'Advanced Derma Πειραιάς', href: '/el/dermatologiko-iatreio/peiraias/' },
+  // Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
+  // { label: 'Advanced Derma Πειραιάς', href: '/el/dermatologiko-iatreio/peiraias/' },
 ];
 
 const serviceLinks = [
@@ -24,7 +25,8 @@ const companyLinks = [
 const instagramAccounts = [
   { handle: '@advanced_derma', href: 'https://www.instagram.com/advanced_derma/' },
   { handle: '@advanced_laser_', href: 'https://www.instagram.com/advanced_laser_/' },
-  { handle: '@advanced_peiraias', href: 'https://www.instagram.com/advanced_peiraias/' },
+  // Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
+  // { handle: '@advanced_peiraias', href: 'https://www.instagram.com/advanced_peiraias/' },
   { handle: '@chrysoula_zisimou', href: 'https://www.instagram.com/chrysoula_zisimou/' },
 ];
 
@@ -78,7 +80,8 @@ export default function Footer() {
               wordBreak: 'normal',
             }}
           >
-            Δερματολογία &amp; Αισθητική Ιατρική υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου, σε Αθήνα και Πειραιά.
+            {/* Πρωτότυπο (μην διαγραφεί): «... σε Αθήνα και Πειραιά.» */}
+            Δερματολογία &amp; Αισθητική Ιατρική υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου, στου Ζωγράφου (Αθήνα).
           </p>
           {/* Social icons */}
           <div style={{ display: 'flex', gap: '12px', paddingLeft: '16px', marginTop: '16px', flexWrap: 'wrap' }}>
@@ -199,11 +202,13 @@ export default function Footer() {
                 Σταθερό: 216 809 3444
               </a>
             </li>
+            {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
             <li>
               <a href="tel:+306936717377" style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: 'rgb(110, 90, 51)' }}>
                 Πειραιάς: 693 671 7377
               </a>
             </li>
+            */}
             <li>
               <a href="mailto:advancedermabooking@gmail.com" style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: 'rgb(110, 90, 51)' }}>
                 advancedermabooking@gmail.com

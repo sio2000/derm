@@ -4,7 +4,8 @@ import Link from 'next/link';
 // Strong title, short description, booking button and clinic contact details.
 const contacts = [
   { label: 'Αθήνα', value: '697 510 5858', href: 'tel:+306975105858' },
-  { label: 'Πειραιάς', value: '693 671 7377', href: 'tel:+306936717377' },
+  // Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
+  // { label: 'Πειραιάς', value: '693 671 7377', href: 'tel:+306936717377' },
   { label: 'Σταθερό', value: '216 809 3444', href: 'tel:+302168093444' },
   { label: 'Email', value: 'advancedermabooking@gmail.com', href: 'mailto:advancedermabooking@gmail.com' },
 ];

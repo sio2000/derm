@@ -1,26 +1,31 @@
 import Image from 'next/image';
 
-/* Πριν & Μετά — κάθε εικόνα περιέχει ήδη το «πριν» (αριστερά) και το «μετά» (δεξιά).
-   Αντιστοιχούν στα αρχεία αποτελεσμάτων του πελάτη (gallery/g02..g32). */
+/* Πριν & Μετά — όλα τα αρχεία αποτελεσμάτων από τον φάκελο public/images/results. */
 type BAItem = { type: 'image' | 'video'; src: string };
 
 const beforeAfter: BAItem[] = [
-  ...['g02', 'g03', 'g04', 'g11', 'g13', 'g14', 'g16', 'g17', 'g28', 'g31'].map(
-    (g): BAItem => ({ type: 'image', src: `/images/gallery/${g}.png` })
-  ),
-  { type: 'image', src: '/images/gallery/akmi.jpeg' },
-  // Επιπλέον αποτελέσματα ασθενών
-  { type: 'image', src: '/images/results/9602.jpg' },
-  { type: 'image', src: '/images/results/652349.jpg' },
-  { type: 'image', src: '/images/results/5061.jpg' },
-  { type: 'image', src: '/images/results/9993.png' },
-  { type: 'image', src: '/images/results/23323.png' },
-  { type: 'image', src: '/images/results/4323.png' },
-  { type: 'image', src: '/images/results/23432.png' },
-  { type: 'image', src: '/images/results/78456.png' },
-  { type: 'image', src: '/images/results/6795.png' },
+  // Εικόνες
+  { type: 'image', src: '/images/results/bf.png' },
+  { type: 'image', src: '/images/results/bf2.png' },
+  { type: 'image', src: '/images/results/bf3.png' },
+  { type: 'image', src: '/images/results/bf4.png' },
+  { type: 'image', src: '/images/results/bf5.png' },
+  { type: 'image', src: '/images/results/bf6.png' },
+  { type: 'image', src: '/images/results/bf7.png' },
+  { type: 'image', src: '/images/results/bf8.png' },
+  { type: 'image', src: '/images/results/bf9.png' },
+  { type: 'image', src: '/images/results/g03.png' },
   { type: 'image', src: '/images/results/1835.jpg' },
+  { type: 'image', src: '/images/results/5061.jpg' },
+  { type: 'image', src: '/images/results/9602.jpg' },
+  { type: 'image', src: '/images/results/IMG_5061.JPG.jpeg' },
   { type: 'image', src: '/images/results/portada.jpg' },
+  // Βίντεο
+  { type: 'video', src: '/images/results/IMG_1942.mp4' },
+  { type: 'video', src: '/images/results/IMG_1943.mp4' },
+  { type: 'video', src: '/images/results/IMG_2647.mp4' },
+  { type: 'video', src: '/images/results/IMG_3521.mp4' },
+  { type: 'video', src: '/images/results/IMG_9016.mp4' },
 ];
 
 export default function BeforeAfterSection() {
@@ -96,7 +101,7 @@ export default function BeforeAfterSection() {
                     inset: 0,
                     width: '100%',
                     height: '100%',
-                    objectFit: 'cover',
+                    objectFit: 'contain',
                     backgroundColor: '#000',
                   }}
                 >
