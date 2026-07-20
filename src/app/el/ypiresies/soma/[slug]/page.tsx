@@ -61,12 +61,25 @@ export default function SomaTreatmentPage({ params }: { params: { slug: string }
               lineHeight: 0,
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={treatment.heroImage}
-              alt={treatment.name}
-              style={{ display: 'block', width: '100%', height: 'auto' }}
-            />
+            {treatment.slug === 'riziki-apotrixosi' ? (
+              <video
+                src="/videos/riziki.mp4"
+                autoPlay
+                controls
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                style={{ display: 'block', width: '100%', height: 'auto' }}
+              />
+            ) : (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src={treatment.heroImage}
+                alt={treatment.name}
+                style={{ display: 'block', width: '100%', height: 'auto' }}
+              />
+            )}
           </div>
           <div className="derma-thero-text" style={{ flex: 1 }}>
             <h1

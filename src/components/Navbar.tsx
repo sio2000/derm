@@ -117,7 +117,7 @@ export default function Navbar() {
           onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'rgb(110, 90, 51)'; e.currentTarget.style.color = '#fff'; }}
           onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'rgb(110, 90, 51)'; }}
         >
-          Ιατρεία
+          Ιατρείο
         </Link>
       </div>
 
@@ -163,7 +163,7 @@ export default function Navbar() {
           className="derma-mobile-cta derma-mobile-cta--outline"
           onClick={() => setMenuOpen(false)}
         >
-          Ιατρεία
+          Ιατρείο
         </Link>
       </nav>
     </header>
