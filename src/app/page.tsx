@@ -11,7 +11,8 @@ import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import ConferencesSection from '@/components/ConferencesSection';
 
-import BeforeAfterSection from '@/components/BeforeAfterSection';
+// Πριν & Μετά: κρυμμένο από την αρχική κατόπιν αιτήματος (το component παραμένει).
+// import BeforeAfterSection from '@/components/BeforeAfterSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
 
@@ -110,8 +111,8 @@ export default function Home() {
       {/* Scientific activity & conferences */}
       <ConferencesSection />
 
-      {/* Before & After (between doctor bio and reviews) */}
-      <BeforeAfterSection />
+      {/* Before & After (between doctor bio and reviews) — hidden on request */}
+      {/* <BeforeAfterSection /> */}
 
       {/* Testimonials */}
       <TestimonialsSection />

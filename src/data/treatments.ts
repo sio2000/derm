@@ -28,11 +28,13 @@ export interface Treatment {
   media?: MediaItem[];
   /** Optional » navigation shown as a tinted band above the content. */
   toc?: { label: string; anchor: string }[];
+  /** When true, the treatment stays in the data but is not shown anywhere in the UI (no list card, no page, no sitemap). */
+  hidden?: boolean;
 }
 
 const img = (slug: string) => `/images/treatment-${slug}.png`;
 
-export const prosopoTreatments: Treatment[] = [
+const allProsopoTreatments: Treatment[] = [
 {
     slug: 'polynucleotides',
     name: 'Πολυνουκλεοτίδια (Rejuran)',
@@ -2399,6 +2401,8 @@ export const prosopoTreatments: Treatment[] = [
 {
     slug: 'endolift-laser',
     name: 'ENDOLIFT LASER',
+    // Κρυμμένο από το UI κατόπιν αιτήματος — το περιεχόμενο παραμένει εδώ.
+    hidden: true,
     category: 'prosopo',
     tagline: 'Ιατρική σύσφιξη προσώπου με ενδοδερμικό laser.',
     description:
@@ -2686,6 +2690,9 @@ export const prosopoTreatments: Treatment[] = [
     bullets: ['Χωρίς βελόνες & χωρίς αποθεραπεία', 'Διέγερση κολλαγόνου', 'Σύσφιξη & λάμψη', 'Βελτίωση ουλών & δυσχρωμιών', 'Εφαρμογή όλο τον χρόνο'],
   }
 ];
+
+// Only visible treatments reach the UI (lists, pages, sitemap). Hidden ones stay above.
+export const prosopoTreatments: Treatment[] = allProsopoTreatments.filter((t) => !t.hidden);
 
 export const somaTreatments: Treatment[] = [
   {
