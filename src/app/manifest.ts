@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Advanced Derma | Δερματολογία & Αισθητική Ιατρική',
     short_name: 'Advanced Derma',
     description:
-      'Δερματολογία & αισθητική ιατρική με τη Δρ. Χρυσούλα Ζήσιμου σε Αθήνα (Ζωγράφου) και Πειραιά.',
+      'Δερματολογία & αισθητική ιατρική με τη Δρ. Χρυσούλα Ζήσιμου στου Ζωγράφου (Αθήνα).',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

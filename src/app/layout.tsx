@@ -7,7 +7,7 @@ import { SITE_URL, SITE_NAME } from '@/lib/site';
 
 const SITE_TITLE = 'Advanced Derma | Δερματολογία & Αισθητική Ιατρική — Δρ. Χρυσούλα Ζήσιμου';
 const SITE_DESCRIPTION =
-  'Advanced Derma — Δερματολογία και αισθητική ιατρική με τη Δρ. Χρυσούλα Ζήσιμου. Εξατομικευμένες θεραπείες προσώπου & σώματος, Laser Hair Removal, ενέσιμα και κλινική δερματολογία σε Αθήνα (Ζωγράφου) και Πειραιά.';
+  'Advanced Derma — Δερματολογία και αισθητική ιατρική με τη Δρ. Χρυσούλα Ζήσιμου. Εξατομικευμένες θεραπείες προσώπου & σώματος, Laser Hair Removal, ενέσιμα και κλινική δερματολογία στου Ζωγράφου (Αθήνα).';
 const LOGO = '/images/newlogo.png';
 const OG_IMAGE = {
   // Absolute URL (built from SITE_URL) so the share image always resolves to the
@@ -33,7 +33,7 @@ const jsonLd = {
   currenciesAccepted: 'EUR',
   email: 'advancedermabooking@gmail.com',
   telephone: '+30 697 510 5858',
-  areaServed: ['Αθήνα', 'Ζωγράφου', 'Πειραιάς', 'Αττική'],
+  areaServed: ['Αθήνα', 'Ζωγράφου', 'Αττική'],
   founder: {
     '@type': 'Physician',
     name: 'Δρ. Χρυσούλα Ζήσιμου',
@@ -54,26 +54,12 @@ const jsonLd = {
       },
       telephone: '+30 697 510 5858',
     },
-    {
-      '@type': 'MedicalClinic',
-      name: 'Advanced Derma Πειραιάς',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Γρηγορίου Λαμπράκη 109, 1ος όροφος',
-        addressLocality: 'Πειραιάς',
-        postalCode: '185 34',
-        addressRegion: 'Αττική',
-        addressCountry: 'GR',
-      },
-      telephone: '+30 693 671 7377',
-    },
   ],
   openingHours: ['Mo-Fr 11:00-20:00', 'Sa 10:00-18:00'],
   sameAs: [
     'https://www.facebook.com/advancedermaa/',
     'https://www.instagram.com/advanced_derma/',
     'https://www.instagram.com/advanced_laser_/',
-    'https://www.instagram.com/advanced_peiraias/',
     'https://www.instagram.com/chrysoula_zisimou/',
     'https://www.tiktok.com/@advanced_derma',
   ],
@@ -94,7 +80,6 @@ export const metadata: Metadata = {
   keywords: [
     'Advanced Derma',
     'δερματολόγος Αθήνα',
-    'δερματολόγος Πειραιάς',
     'δερματολόγος Ζωγράφου',
     'Δρ. Χρυσούλα Ζήσιμου',
     'αισθητική ιατρική',

@@ -4549,5 +4549,4 @@ export interface Clinic {
 
 export const clinics: Clinic[] = [
   { slug: 'athina', name: 'Advanced Derma Αθήνα', address: 'Στρατάρχου Παπάγου Αλεξάνδρου 50, 2ος όροφος, Ζωγράφου 157 71', phone: '697 510 5858', area: 'Ζωγράφου', image: '/images/clinic-athens.jpg' },
-  { slug: 'peiraias', name: 'Advanced Derma Πειραιάς', address: 'Γρηγορίου Λαμπράκη 109, 1ος όροφος, Πειραιάς 185 34', phone: '693 671 7377', area: 'Πειραιάς', image: '/images/clinic-piraeus.jpg' },
 ];

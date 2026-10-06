@@ -6,7 +6,7 @@ import { clinics } from '@/data/treatments';
 
 export const metadata = {
   title: 'Τα Ιατρεία μας | Advanced Derma',
-  description: 'Βρείτε το ιατρείο Advanced Derma που σας εξυπηρετεί. Δερματολογικά ιατρεία σε Αθήνα (Ζωγράφου) και Πειραιά, υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου.',
+  description: 'Βρείτε το ιατρείο Advanced Derma που σας εξυπηρετεί. Δερματολογικό ιατρείο στου Ζωγράφου (Αθήνα), υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου.',
 };
 
 export default function ClinicsPage() {
@@ -63,9 +63,7 @@ export default function ClinicsPage() {
             gap: '32px',
           }}
         >
-          {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί: το ιατρείο Πειραιά (slug 'peiraias')
-              φιλτράρεται μόνο από την προβολή. Τα δεδομένα παραμένουν στο data/treatments.ts. */}
-          {clinics.filter((clinic) => clinic.slug !== 'peiraias').map((clinic) => (
+          {clinics.map((clinic) => (
             <div
               key={clinic.slug}
               style={{ textDecoration: 'none', cursor: 'default' }}

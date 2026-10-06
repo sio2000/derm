@@ -13,11 +13,6 @@ const clinicCards = [
     text: 'Επισκεφθείτε το Advanced Derma στου Ζωγράφου (Αθήνα).',
     href: '/el/dermatologika-iatreia/',
   },
-  // Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
-  // {
-  //   image: '/images/clinic-piraeus.jpg',
-  //   href: '/el/dermatologiko-iatreio/peiraias/',
-  // },
 ];
 
 export default function FindClinicSection() {

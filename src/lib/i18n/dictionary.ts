@@ -47,14 +47,12 @@ export const DICTIONARY: Record<string, Translations> = {
   'Πολιτική Προστασίας Προσωπικών Δεδομένων': { en: 'Privacy Policy', ar: 'سياسة الخصوصية' },
   'Πολιτική Cookies': { en: 'Cookie Policy', ar: 'سياسة ملفات تعريف الارتباط' },
   'Advanced Derma Αθήνα': { en: 'Advanced Derma Athens', ar: 'Advanced Derma أثينا' },
-  'Advanced Derma Πειραιάς': { en: 'Advanced Derma Piraeus', ar: 'Advanced Derma بيرايوس' },
-  'Δερματολογία & Αισθητική Ιατρική υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου, σε Αθήνα και Πειραιά.': {
-    en: 'Dermatology & Aesthetic Medicine under the direction of Dr. Chrysoula Zisimou, in Athens and Piraeus.',
-    ar: 'طب الأمراض الجلدية والطب التجميلي بإشراف الدكتورة خريسولا زيسيمو، في أثينا وبيرايوس.',
+  'Δερματολογία & Αισθητική Ιατρική υπό τη διεύθυνση της Δρ. Χρυσούλας Ζήσιμου, στου Ζωγράφου (Αθήνα).': {
+    en: 'Dermatology & Aesthetic Medicine under the direction of Dr. Chrysoula Zisimou, in Zografou (Athens).',
+    ar: 'طب الأمراض الجلدية والطب التجميلي بإشراف الدكتورة خريسولا زيسيمو، في زوغرافو (أثينا).',
   },
   'Αθήνα: 697 510 5858': { en: 'Athens: 697 510 5858', ar: 'أثينا: 697 510 5858' },
   'Σταθερό: 216 809 3444': { en: 'Landline: 216 809 3444', ar: 'الخط الأرضي: 216 809 3444' },
-  'Πειραιάς: 693 671 7377': { en: 'Piraeus: 693 671 7377', ar: 'بيرايوس: 693 671 7377' },
 
   // ── Booking form ────────────────────────────────────────────
   'Όνομα *': { en: 'First name *', ar: 'الاسم *' },

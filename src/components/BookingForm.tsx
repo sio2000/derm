@@ -148,9 +148,6 @@ export default function BookingForm() {
         >
           <option value="">Επιλέξτε ιατρείο...</option>
           <option>Advanced Derma Αθήνα — Ζωγράφου</option>
-          {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί:
-          <option>Advanced Derma Πειραιάς</option>
-          */}
         </select>
       </div>
 

@@ -120,11 +120,6 @@ export default function BookingRequestPage() {
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Αθήνα: <a href="tel:+306975105858" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>697 510 5858</a>
               </p>
-              {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
-              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
-                Πειραιάς: <a href="tel:+306936717377" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>693 671 7377</a>
-              </p>
-              */}
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333' }}>
                 Σταθερό: <a href="tel:+302168093444" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>216 809 3444</a>
               </p>
@@ -165,11 +160,6 @@ export default function BookingRequestPage() {
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Instagram: <a href="https://www.instagram.com/advanced_laser_/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@advanced_laser_</a>
               </p>
-              {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
-              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
-                Instagram: <a href="https://www.instagram.com/advanced_peiraias/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@advanced_peiraias</a>
-              </p>
-              */}
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Instagram: <a href="https://www.instagram.com/chrysoula_zisimou/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@chrysoula_zisimou</a>
               </p>
@@ -257,38 +247,6 @@ export default function BookingRequestPage() {
             />
           </div>
 
-          {/* Προσωρινά κρυμμένο από το UI — μην διαγραφεί (ιατρείο Πειραιά):
-          <div
-            style={{
-              backgroundColor: '#fff',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: '0 4px 24px rgba(110, 90, 51, 0.08)',
-            }}
-          >
-            <div style={{ padding: '24px' }}>
-              <h3
-                style={{
-                  fontFamily: 'HarmoniaSans, sans-serif',
-                  fontSize: '22px',
-                  fontWeight: 700,
-                  color: 'rgb(110, 90, 51)',
-                  marginBottom: '8px',
-                }}
-              >
-                Advanced Derma Πειραιάς
-              </h3>
-            </div>
-            <iframe
-              src="https://maps.google.com/maps?q=Advanced%20Derma%20Πειραιάς&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="320"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-          */}
         </div>
       </section>
 
