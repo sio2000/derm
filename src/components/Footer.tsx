@@ -21,8 +21,6 @@ const companyLinks = [
 ];
 
 const instagramAccounts = [
-  { handle: '@advanced_derma', href: 'https://www.instagram.com/advanced_derma/' },
-  { handle: '@advanced_laser_', href: 'https://www.instagram.com/advanced_laser_/' },
   { handle: '@chrysoula_zisimou', href: 'https://www.instagram.com/chrysoula_zisimou/' },
 ];
 
@@ -187,11 +185,6 @@ export default function Footer() {
             Επικοινωνία
           </h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <li>
-              <a href="tel:+306975105858" style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: 'rgb(110, 90, 51)' }}>
-                Αθήνα: 697 510 5858
-              </a>
-            </li>
             <li>
               <a href="tel:+302168093444" style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: 'rgb(110, 90, 51)' }}>
                 Σταθερό: 216 809 3444

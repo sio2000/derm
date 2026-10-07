@@ -117,9 +117,6 @@ export default function BookingRequestPage() {
               >
                 Τηλέφωνο
               </h3>
-              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
-                Αθήνα: <a href="tel:+306975105858" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>697 510 5858</a>
-              </p>
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333' }}>
                 Σταθερό: <a href="tel:+302168093444" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>216 809 3444</a>
               </p>
@@ -154,12 +151,6 @@ export default function BookingRequestPage() {
               >
                 Social
               </h3>
-              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
-                Instagram: <a href="https://www.instagram.com/advanced_derma/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@advanced_derma</a>
-              </p>
-              <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
-                Instagram: <a href="https://www.instagram.com/advanced_laser_/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@advanced_laser_</a>
-              </p>
               <p style={{ fontFamily: 'HarmoniaSans, sans-serif', fontSize: '16px', color: '#333', marginBottom: '8px' }}>
                 Instagram: <a href="https://www.instagram.com/chrysoula_zisimou/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgb(110, 90, 51)', textDecoration: 'none' }}>@chrysoula_zisimou</a>
               </p>
