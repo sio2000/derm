@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { prosopoTreatments, somaTreatments } from '@/data/treatments';
+import type { Treatment } from '@/data/treatments';
 
 const popularSlugs = [
   'apotrixosi-laser-alexandrite',
@@ -12,8 +12,6 @@ const popularSlugs = [
   'hydrafacial',
   'aqualyx-michelangelo',
 ];
-
-const allTreatments = [...prosopoTreatments, ...somaTreatments];
 
 // Card image overrides for the popular grid only (does not affect the treatment
 // pages or category listings).
@@ -27,9 +25,9 @@ const popularImageOverride: Record<string, string> = {
 // (objectFit: contain) instead of cropping them.
 const containSlugs = new Set(['hydrafacial', 'apotrixosi-laser-alexandrite', 'polynucleotides', 'aqualyx-michelangelo']);
 
-const treatments = popularSlugs
+const pickPopular = (allTreatments: Treatment[]) => popularSlugs
   .map((slug) => allTreatments.find((item) => item.slug === slug))
-  .filter((item): item is (typeof allTreatments)[number] => Boolean(item))
+  .filter((item): item is Treatment => Boolean(item))
   .map((treatment) => ({
     ...treatment,
     image: popularImageOverride[treatment.slug] ?? treatment.thumb ?? treatment.heroImage,
@@ -37,7 +35,8 @@ const treatments = popularSlugs
     href: `/el/ypiresies/${treatment.category}/${treatment.slug}/`,
   }));
 
-export default function PopularTreatments() {
+export default function PopularTreatments({ allTreatments }: { allTreatments: Treatment[] }) {
+  const treatments = pickPopular(allTreatments);
   return (
     <div
       className="derma-pop"

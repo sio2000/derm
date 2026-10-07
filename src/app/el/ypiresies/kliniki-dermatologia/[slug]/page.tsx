@@ -4,14 +4,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TreatmentCTA from '@/components/TreatmentCTA';
 import TreatmentMedia from '@/components/TreatmentMedia';
-import { klinikiTreatments } from '@/data/treatments';
+import { getTreatment } from '@/lib/content/treatments';
 
-export async function generateStaticParams() {
-  return klinikiTreatments.map((t) => ({ slug: t.slug }));
-}
+// Treatments are editable from the admin panel, so pages render on request.
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const treatment = klinikiTreatments.find((t) => t.slug === params.slug);
+  const treatment = await getTreatment('kliniki-dermatologia', params.slug);
   if (!treatment) return {};
   return {
     title: `${treatment.name} | Κλινική Δερματολογία | Advanced Derma`,
@@ -19,8 +18,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function KlinikiTreatmentPage({ params }: { params: { slug: string } }) {
-  const treatment = klinikiTreatments.find((t) => t.slug === params.slug);
+export default async function KlinikiTreatmentPage({ params }: { params: { slug: string } }) {
+  const treatment = await getTreatment('kliniki-dermatologia', params.slug);
   if (!treatment) notFound();
 
   // One image goes in the hero; every other image/video is collected and shown

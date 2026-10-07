@@ -1,16 +1,19 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
-import {
-  prosopoTreatments,
-  somaTreatments,
-  klinikiTreatments,
-  clinics,
-} from '@/data/treatments';
+import { clinics } from '@/data/treatments';
+import { getTreatments } from '@/lib/content/treatments';
 
 type Entry = MetadataRoute.Sitemap[number];
 
+export const dynamic = 'force-dynamic';
+
 // Served at /sitemap.xml
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [prosopoTreatments, somaTreatments, klinikiTreatments] = await Promise.all([
+    getTreatments('prosopo'),
+    getTreatments('soma'),
+    getTreatments('kliniki-dermatologia'),
+  ]);
   const now = new Date();
   const abs = (path: string) => `${SITE_URL}${path}`;
 

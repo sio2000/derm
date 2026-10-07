@@ -15,12 +15,17 @@ import ConferencesSection from '@/components/ConferencesSection';
 // import BeforeAfterSection from '@/components/BeforeAfterSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
+import { getTreatments } from '@/lib/content/treatments';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
-export default function Home() {
+// Reviews and treatments are editable from the admin panel.
+export const dynamic = 'force-dynamic';
+
+export default async function Home() {
+  const popularSource = [...(await getTreatments('prosopo')), ...(await getTreatments('soma'))];
   return (
     <>
       <Navbar />
@@ -94,7 +99,7 @@ export default function Home() {
       <NewsSection />
 
       {/* Popular Treatments */}
-      <PopularTreatments />
+      <PopularTreatments allTreatments={popularSource} />
 
       {/* Find a Clinic */}
       <FindClinicSection />

@@ -4,7 +4,7 @@ import { SITE_URL } from '@/lib/site';
 // Served at /robots.txt
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: '*', allow: '/' }],
+    rules: [{ userAgent: '*', allow: '/', disallow: ['/admin', '/api/'] }],
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
   };

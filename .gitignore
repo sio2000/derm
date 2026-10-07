@@ -44,3 +44,6 @@ next-env.d.ts
 # large unused source videos (exceed GitHub limits)
 *.MOV
 *.mov
+
+# admin panel local content store
+/.data/

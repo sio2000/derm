@@ -2,14 +2,17 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TreatmentList from '@/components/TreatmentList';
-import { klinikiTreatments } from '@/data/treatments';
+import { getTreatments } from '@/lib/content/treatments';
 
 export const metadata = {
   title: 'Κλινική Δερματολογία | Advanced Derma',
   description: 'Εξειδικευμένη κλινική δερματολογία στα ιατρεία Advanced Derma. Διάγνωση και θεραπεία δερματικών παθήσεων με σύγχρονα πρωτόκολλα.',
 };
 
-export default function KlinikiDermatologiaPage() {
+export const dynamic = 'force-dynamic';
+
+export default async function KlinikiDermatologiaPage() {
+  const klinikiTreatments = await getTreatments('kliniki-dermatologia');
   return (
     <>
       <Navbar />

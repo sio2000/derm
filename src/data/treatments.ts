@@ -34,7 +34,7 @@ export interface Treatment {
 
 const img = (slug: string) => `/images/treatment-${slug}.png`;
 
-const allProsopoTreatments: Treatment[] = [
+export const allProsopoTreatments: Treatment[] = [
 {
     slug: 'polynucleotides',
     name: 'Πολυνουκλεοτίδια (Rejuran)',

@@ -4,14 +4,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TreatmentCTA from '@/components/TreatmentCTA';
 import TreatmentContent from '@/components/TreatmentContent';
-import { somaTreatments } from '@/data/treatments';
+import { getTreatment } from '@/lib/content/treatments';
 
-export async function generateStaticParams() {
-  return somaTreatments.map((t) => ({ slug: t.slug }));
-}
+// Treatments are editable from the admin panel, so pages render on request.
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const treatment = somaTreatments.find((t) => t.slug === params.slug);
+  const treatment = await getTreatment('soma', params.slug);
   if (!treatment) return {};
   return {
     title: `${treatment.name} | Θεραπείες Σώματος | Advanced Derma`,
@@ -19,8 +18,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function SomaTreatmentPage({ params }: { params: { slug: string } }) {
-  const treatment = somaTreatments.find((t) => t.slug === params.slug);
+export default async function SomaTreatmentPage({ params }: { params: { slug: string } }) {
+  const treatment = await getTreatment('soma', params.slug);
   if (!treatment) notFound();
 
   return (

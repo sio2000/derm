@@ -2,14 +2,17 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TreatmentList from '@/components/TreatmentList';
-import { prosopoTreatments } from '@/data/treatments';
+import { getTreatments } from '@/lib/content/treatments';
 
 export const metadata = {
   title: 'Θεραπείες Προσώπου | Advanced Derma',
   description: 'Ανακαλύψτε τις θεραπείες προσώπου στα δερματολογικά ιατρεία Advanced Derma. Σύγχρονες αισθητικές και ιατρικές θεραπείες για κάθε ανάγκη επιδερμίδας.',
 };
 
-export default function ProsopoPage() {
+export const dynamic = 'force-dynamic';
+
+export default async function ProsopoPage() {
+  const prosopoTreatments = await getTreatments('prosopo');
   return (
     <>
       <Navbar />

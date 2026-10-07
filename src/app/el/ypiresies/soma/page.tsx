@@ -2,14 +2,17 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TreatmentList from '@/components/TreatmentList';
-import { somaTreatments } from '@/data/treatments';
+import { getTreatments } from '@/lib/content/treatments';
 
 export const metadata = {
   title: 'Θεραπείες Σώματος | Advanced Derma',
   description: 'Ανακαλύψτε τις θεραπείες σώματος στα δερματολογικά ιατρεία Advanced Derma. Σύγχρονες αισθητικές λύσεις για σύσφιξη, κυτταρίτιδα και αναδιαμόρφωση σιλουέτας.',
 };
 
-export default function SomaPage() {
+export const dynamic = 'force-dynamic';
+
+export default async function SomaPage() {
+  const somaTreatments = await getTreatments('soma');
   return (
     <>
       <Navbar />

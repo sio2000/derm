@@ -6,7 +6,7 @@ import TreatmentCTA from '@/components/TreatmentCTA';
 import TreatmentContent from '@/components/TreatmentContent';
 import BiofillerSection from '@/components/BiofillerSection';
 import ExosomesSection from '@/components/ExosomesSection';
-import { prosopoTreatments } from '@/data/treatments';
+import { getTreatment } from '@/lib/content/treatments';
 
 // Soft rose band used for the » navigation.
 const TINT = 'rgb(237, 221, 214)';
@@ -15,12 +15,11 @@ const TINT = 'rgb(237, 221, 214)';
 const BIOFILLER_SLUG = 'aytologo-biofiller';
 const EXOSOMES_SLUG = 'therapia-me-exosomata';
 
-export async function generateStaticParams() {
-  return prosopoTreatments.map((t) => ({ slug: t.slug }));
-}
+// Treatments are editable from the admin panel, so pages render on request.
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const treatment = prosopoTreatments.find((t) => t.slug === params.slug);
+  const treatment = await getTreatment('prosopo', params.slug);
   if (!treatment) return {};
   return {
     title: `${treatment.name} | Θεραπείες Προσώπου | Advanced Derma`,
@@ -28,8 +27,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ProsopoTreatmentPage({ params }: { params: { slug: string } }) {
-  const treatment = prosopoTreatments.find((t) => t.slug === params.slug);
+export default async function ProsopoTreatmentPage({ params }: { params: { slug: string } }) {
+  const treatment = await getTreatment('prosopo', params.slug);
   if (!treatment) notFound();
 
   // The Sisthaema page intentionally hides the breadcrumb row.
